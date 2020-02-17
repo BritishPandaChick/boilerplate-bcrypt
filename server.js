@@ -24,7 +24,8 @@ bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash){
 //END_ASYNC
 
 //START_SYNC
-
+var hash = bcrypt.hashSync(myPlaintextPassword, saltRounds);
+var result = bcrypt.compareSync(myPlaintextPassword, hash);
 
 
 //END_SYNC
